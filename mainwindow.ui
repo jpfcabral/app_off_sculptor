@@ -20,7 +20,7 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_5" stretch="77,25">
         <item>
-         <widget class="QWidget" name="widget" native="true"/>
+         <widget class="Plotter" name="widget" native="true"/>
         </item>
         <item>
          <widget class="QGroupBox" name="groupBox">
@@ -54,7 +54,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcdNumber_15"/>
+               <widget class="QLCDNumber" name="lcdNumber_15">
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -75,7 +79,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcdNumber_16"/>
+               <widget class="QLCDNumber" name="lcdNumber_16">
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -96,7 +104,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcdNumber_17"/>
+               <widget class="QLCDNumber" name="lcdNumber_17">
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -176,7 +188,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcdNumber_6"/>
+               <widget class="QLCDNumber" name="lcdNumber_6">
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -197,7 +213,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcdNumber_7"/>
+               <widget class="QLCDNumber" name="lcdNumber_7">
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -218,7 +238,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcdNumber_8"/>
+               <widget class="QLCDNumber" name="lcdNumber_8">
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -258,7 +282,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcdNumber_12"/>
+               <widget class="QLCDNumber" name="lcdNumber_12">
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -279,7 +307,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcdNumber_13"/>
+               <widget class="QLCDNumber" name="lcdNumber_13">
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -300,7 +332,11 @@
                </widget>
               </item>
               <item>
-               <widget class="QLCDNumber" name="lcdNumber_14"/>
+               <widget class="QLCDNumber" name="lcdNumber_14">
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -338,7 +374,11 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLCDNumber" name="lcdNumber"/>
+             <widget class="QLCDNumber" name="lcdNumber">
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
             </item>
             <item row="1" column="0">
              <widget class="QLabel" name="label_2">
@@ -355,7 +395,11 @@
              </widget>
             </item>
             <item row="1" column="2">
-             <widget class="QLCDNumber" name="lcdNumber_2"/>
+             <widget class="QLCDNumber" name="lcdNumber_2">
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
             </item>
             <item row="2" column="0">
              <widget class="QLabel" name="label_3">
@@ -372,7 +416,11 @@
              </widget>
             </item>
             <item row="2" column="2">
-             <widget class="QLCDNumber" name="lcdNumber_3"/>
+             <widget class="QLCDNumber" name="lcdNumber_3">
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
             </item>
             <item row="3" column="0">
              <widget class="QLabel" name="label_4">
@@ -389,7 +437,11 @@
              </widget>
             </item>
             <item row="3" column="2">
-             <widget class="QLCDNumber" name="lcdNumber_4"/>
+             <widget class="QLCDNumber" name="lcdNumber_4">
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -429,31 +481,37 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionRun"/>
   </widget>
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>
    </property>
   </action>
+  <action name="actionRun">
+   <property name="text">
+    <string>Run</string>
+   </property>
+  </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Plotter</class>
+   <extends>QWidget</extends>
+   <header>plotter.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setRColor(int)</slot>
+    <slot>setGColor(int)</slot>
+    <slot>setBColor(int)</slot>
+    <slot>setAlpha(int)</slot>
+    <slot>setPlano(int)</slot>
+    <slot>runWriteOFF()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
-  <connection>
-   <sender>actionQuit</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>QuitFromApp()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>348</x>
-     <y>224</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>horizontalSlider</sender>
    <signal>valueChanged(int)</signal>
@@ -461,12 +519,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>702</x>
-     <y>552</y>
+     <x>757</x>
+     <y>569</y>
     </hint>
     <hint type="destinationlabel">
-     <x>849</x>
-     <y>556</y>
+     <x>827</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -477,8 +535,8 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>739</x>
-     <y>124</y>
+     <x>748</x>
+     <y>139</y>
     </hint>
     <hint type="destinationlabel">
      <x>809</x>
@@ -493,12 +551,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>735</x>
-     <y>248</y>
+     <x>756</x>
+     <y>267</y>
     </hint>
     <hint type="destinationlabel">
-     <x>808</x>
-     <y>248</y>
+     <x>826</x>
+     <y>271</y>
     </hint>
    </hints>
   </connection>
@@ -509,12 +567,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>741</x>
-     <y>279</y>
+     <x>756</x>
+     <y>298</y>
     </hint>
     <hint type="destinationlabel">
-     <x>805</x>
-     <y>272</y>
+     <x>826</x>
+     <y>302</y>
     </hint>
    </hints>
   </connection>
@@ -525,12 +583,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>729</x>
-     <y>310</y>
+     <x>756</x>
+     <y>329</y>
     </hint>
     <hint type="destinationlabel">
-     <x>802</x>
-     <y>307</y>
+     <x>826</x>
+     <y>333</y>
     </hint>
    </hints>
   </connection>
@@ -541,8 +599,8 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>758</x>
-     <y>397</y>
+     <x>756</x>
+     <y>414</y>
     </hint>
     <hint type="destinationlabel">
      <x>808</x>
@@ -557,8 +615,8 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>759</x>
-     <y>426</y>
+     <x>756</x>
+     <y>445</y>
     </hint>
     <hint type="destinationlabel">
      <x>805</x>
@@ -573,12 +631,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>764</x>
-     <y>453</y>
+     <x>756</x>
+     <y>476</y>
     </hint>
     <hint type="destinationlabel">
-     <x>809</x>
-     <y>457</y>
+     <x>826</x>
+     <y>480</y>
     </hint>
    </hints>
   </connection>
@@ -589,12 +647,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>771</x>
-     <y>575</y>
+     <x>757</x>
+     <y>598</y>
     </hint>
     <hint type="destinationlabel">
-     <x>810</x>
-     <y>575</y>
+     <x>827</x>
+     <y>602</y>
     </hint>
    </hints>
   </connection>
@@ -605,12 +663,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>749</x>
-     <y>598</y>
+     <x>757</x>
+     <y>627</y>
     </hint>
     <hint type="destinationlabel">
-     <x>809</x>
-     <y>602</y>
+     <x>827</x>
+     <y>631</y>
     </hint>
    </hints>
   </connection>
@@ -621,12 +679,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>763</x>
-     <y>628</y>
+     <x>757</x>
+     <y>656</y>
     </hint>
     <hint type="destinationlabel">
-     <x>809</x>
-     <y>632</y>
+     <x>827</x>
+     <y>660</y>
     </hint>
    </hints>
   </connection>
@@ -637,12 +695,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>518</x>
-     <y>555</y>
+     <x>509</x>
+     <y>580</y>
     </hint>
     <hint type="destinationlabel">
-     <x>566</x>
-     <y>558</y>
+     <x>579</x>
+     <y>584</y>
     </hint>
    </hints>
   </connection>
@@ -653,12 +711,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>502</x>
-     <y>588</y>
+     <x>509</x>
+     <y>611</y>
     </hint>
     <hint type="destinationlabel">
-     <x>567</x>
-     <y>587</y>
+     <x>579</x>
+     <y>615</y>
     </hint>
    </hints>
   </connection>
@@ -669,12 +727,124 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>527</x>
-     <y>614</y>
+     <x>509</x>
+     <y>642</y>
     </hint>
     <hint type="destinationlabel">
-     <x>559</x>
-     <y>619</y>
+     <x>579</x>
+     <y>646</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>setRColor(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>694</x>
+     <y>563</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>484</x>
+     <y>478</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>setGColor(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>706</x>
+     <y>592</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>460</x>
+     <y>498</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>setBColor(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>684</x>
+     <y>620</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>490</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>setAlpha(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>711</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_17</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>setPlano(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>629</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>464</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>QuitFromApp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>441</x>
+     <y>351</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRun</sender>
+   <signal>triggered()</signal>
+   <receiver>widget</receiver>
+   <slot>runWriteOFF()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>310</x>
+     <y>291</y>
     </hint>
    </hints>
   </connection>
