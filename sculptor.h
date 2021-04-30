@@ -24,37 +24,16 @@ public:
   Sculptor(int _nx, int _ny, int _nz);
   ~Sculptor();
 
-  /**
-   * @brief setColor escolhe uma cor para desenhar
-   * @param r cor vermelha
-   * @param g cor verde
-   * @param b cor azul
-   * @param alpha opacidade
-   */
   void setColor(float r, float g, float b, float alpha);
-
-  /**
-   * @brief putVoxel Coloca um voxel na posição desejada
-   * @param x posição em x
-   * @param y posição em y
-   * @param z posição em z
-   */
   void putVoxel(int x, int y, int z);
-
-  /**
-   * @brief cutVoxel Desabilita um voxel
-   * @param x posição em x
-   * @param y posição em y
-   * @param z posição em z
-   */
   void cutVoxel(int x, int y, int z);
-
-  /**
-   * @brief writeOFF Escreve em um arquivo padrão OFF
-   * @param filename Nome do arquivo
-   */
+  void putBox(int x0, int x1, int y0, int y1, int z0, int z1);
+  void cutBox(int x0, int x1, int y0, int y1, int z0, int z1);
+  void putSphere(int xcenter, int ycenter, int zcenter, int radius);
+  void cutSphere(int xcenter, int ycenter, int zcenter, int radius);
+  void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
+  void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
   void writeOFF(char* filename);
-
   Voxel getVoxelState(int x, int y, int z);
 };
 
